@@ -4,6 +4,9 @@
 #include "Event.h"
 #include <ctime>
 #include <vector>
+#include <sstream>
+
+using namespace std;
 
 class Game
 {
@@ -33,7 +36,7 @@ private:
 
 	//Character related
 	int activeCharacter;
-	std::vector<Character> characters;
-	std::string fileName;
+	vector<Character> characters;
+	string fileName;
 };
 

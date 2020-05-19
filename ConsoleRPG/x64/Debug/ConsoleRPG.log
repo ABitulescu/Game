@@ -1,16 +1,4 @@
-﻿F:\ProgramFiles\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(467,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (ConsoleRPG.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  Armor.cpp
-  Character.cpp
-  Enemy.cpp
-F:\VisualStudioProjects\Game\Game\ConsoleRPG\Enemy.cpp(11,28): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-  Event.cpp
+﻿F:\ProgramFiles\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(467,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (GameRPG.vcxproj).  This can lead to incorrect clean and rebuild behavior.
   Game.cpp
-F:\VisualStudioProjects\Game\Game\ConsoleRPG\Game.cpp(85,41): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-  Inventory.cpp
-  Item.cpp
-  Main.cpp
-F:\VisualStudioProjects\Game\Game\ConsoleRPG\Main.cpp(5,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  Puzzle.cpp
-  Weapon.cpp
-  Generating Code...
+F:\VisualStudioProjects\Game\Game\ConsoleRPG\Game.cpp(102,41): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
   ConsoleRPG.vcxproj -> F:\VisualStudioProjects\Game\Game\x64\Debug\Game.exe

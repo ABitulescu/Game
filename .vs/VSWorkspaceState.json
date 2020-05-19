@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\ConsoleRPG"
+    "\\ConsoleRPG",
+    "\\ConsoleRPG\\x64"
   ],
-  "SelectedNode": "\\ConsoleRPG\\armor.cpp",
+  "SelectedNode": "\\ConsoleRPG\\Game.cpp",
   "PreviewInSolutionExplorer": false
 }

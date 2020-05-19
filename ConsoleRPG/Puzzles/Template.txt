@@ -1,0 +1,6 @@
+Question?
+Nr of answers
+Answer1
+Answer2
+AnswerN
+Correct answer
