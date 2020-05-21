@@ -1,4 +1,6 @@
 ﻿F:\ProgramFiles\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(467,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (GameRPG.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Character.cpp
   Game.cpp
-F:\VisualStudioProjects\Game\Game\ConsoleRPG\Game.cpp(119,41): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+F:\VisualStudioProjects\Game\Game\ConsoleRPG\Game.cpp(117,41): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  Generating Code...
   ConsoleRPG.vcxproj -> F:\VisualStudioProjects\Game\Game\x64\Debug\Game.exe

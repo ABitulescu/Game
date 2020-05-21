@@ -144,6 +144,41 @@ void Character::updateStats()
 	this->luck = this->intelligence;
 }
 
+void Character::addToStat(int stat, int value)
+{
+	if (this->statPoints < value)
+	{
+		cout << "You don't have any stat points to assign!" << "\n";
+	}
+	else
+	{
+		switch (stat)
+		{
+		case 0:
+			this->strengh += value;
+			break;
+
+		case 1:
+			this->vitality += value;
+			break;
+
+		case 2:
+			this->dexterity += value;
+			break;
+
+		case 3:
+			this->intelligence += value;
+			break;
+
+		default:
+			cout << "Your choice is not a Stat option" << "\n";
+			break;
+		}
+
+		this->statPoints -= value;
+	}
+}
+
 void Character::levelUp()
 {
 	if (this->exp >= this->expNext)
@@ -157,6 +192,8 @@ void Character::levelUp()
 
 		this->statPoints++;
 		this->skillPoints++;
+
+		this->updateStats();
 
 		cout << "You are now Level " << this->level << "!" << "\n\n";
 	}

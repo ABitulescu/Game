@@ -17,9 +17,11 @@ public:
 	//Functions
 	void initialize(const string name);
 	void printStats() const;
-	void levelUp();
 	string getAsString()const;
+	void levelUp();
 	void updateStats();
+	void addToStat(int stat, int value);
+
 
 
 	//Accessors
@@ -28,6 +30,7 @@ public:
 	inline const int& getLevel() const { return this->level; }
 	inline const int& getExp() const { return this->exp; }
 	inline const int& getExpNext() const { return this->expNext; }
+	inline const int& getStatPoints() const { return this->statPoints; }
 	inline const int& getHP() const { return this->hp; }
 	inline const int& getHPMax() const { return this->hpMax; }
 	inline const int& getStamina() const { return this->stamina; }

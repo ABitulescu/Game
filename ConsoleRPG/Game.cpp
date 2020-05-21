@@ -48,7 +48,7 @@ void Game::mainMenu()
 	cout << endl;
 
 	cout << endl << "Choice: ";
-	cin >> choice;
+	cin >> this->choice;
 
 	while (cin.fail())
 	{
@@ -57,13 +57,13 @@ void Game::mainMenu()
 		cin.ignore(100, '\n');
 
 		cout << endl << "Choice: ";
-		cin >> choice;
+		cin >> this->choice;
 	}
 
 	cin.ignore(100, '\n');
 	cout << endl;
 
-	switch (choice)
+	switch (this->choice)
 	{
 	case 0: //QUIT
 		playing = false;
@@ -77,8 +77,7 @@ void Game::mainMenu()
 
 	case 3: //Level Up
 
-		this->characters[activeCharacter].levelUp();
-
+		this->levelUpCharacter();
 		break;
 
 	case 5: //Character sheet
@@ -108,7 +107,6 @@ void Game::mainMenu()
 	}
 }
 
-
 void Game::createNewCharacter()
 {
 	string name = "";
@@ -119,6 +117,60 @@ void Game::createNewCharacter()
 	activeCharacter = characters.size() - 1;
 	characters[activeCharacter].initialize(name);
 }
+
+void Game::levelUpCharacter()
+{
+	this->characters[activeCharacter].levelUp();
+
+	if (this->characters[activeCharacter].getStatPoints() > 0)
+	{
+		cout << "You have have stat points to assign!" << "\n\n";
+
+		cout << "Stat to upgrade: " << "\n";
+		cout << "0: Strength" << "\n";
+		cout << "1: Vitality: " << "\n";
+		cout << "2: Dexterity: " << "\n";
+		cout << "3: Intelligence: " << "\n";
+
+		cin >> this->choice;
+
+		while (cin.fail() || this->choice > 3)
+		{
+			cout << "Faulty input!" << "\n";
+			cin.clear();
+			cin.ignore(100, '\n');
+
+			cout << "Stat to upgrade : " << "\n";
+			cin >> this->choice;
+		}
+
+		cin.ignore(100, '\n');
+		cout << "\n";
+
+		switch (this->choice)
+		{
+		case 0: //Strengh
+			this->characters[activeCharacter].addToStat(0, 1);
+			break;
+
+		case 1: //Vitality
+			this->characters[activeCharacter].addToStat(1, 1);
+			break;
+
+		case 2: //Dexterity
+			this->characters[activeCharacter].addToStat(2, 1);
+			break;
+
+		case 3: //Intelligence
+			this->characters[activeCharacter].addToStat(3, 1);
+			break;
+
+		default :
+			break;
+		}
+	}
+}
+
 void Game::saveCharacters()
 {
 	ofstream outFile(fileName);
