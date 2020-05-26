@@ -18,6 +18,7 @@ Game::~Game()
 void Game::initGame()
 {
 	createNewCharacter();
+
 }
 
 void Game::mainMenu()

@@ -22,8 +22,6 @@ public:
 	void updateStats();
 	void addToStat(int stat, int value);
 
-
-
 	//Accessors
 	inline const int& getDistTravel() const { return this->distanceTravelled; }
 	inline const string& getName() const { return this->name; }

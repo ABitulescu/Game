@@ -156,18 +156,22 @@ void Character::addToStat(int stat, int value)
 		{
 		case 0:
 			this->strengh += value;
+			cout << "Added 1 point to strengh" << "\n";
 			break;
 
 		case 1:
 			this->vitality += value;
+			cout << "Added 1 point to vitality" << "\n";
 			break;
 
 		case 2:
 			this->dexterity += value;
+			cout << "Added 1 point to dexterity" << "\n";
 			break;
 
 		case 3:
 			this->intelligence += value;
+			cout << "Added 1 point to intelligence" << "\n";
 			break;
 
 		default:

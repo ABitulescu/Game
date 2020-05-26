@@ -2,6 +2,7 @@
 
 #include "Functions.h"
 #include "Event.h"
+#include "dArray.h"
 #include <ctime>
 #include <vector>
 #include <sstream>
