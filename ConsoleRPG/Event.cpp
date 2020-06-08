@@ -10,7 +10,7 @@ Event::~Event()
 
 }
 
-void Event::generateEvent(Character &character)
+void Event::generateEvent(Character &character, dArray<Enemy>& enemies)
 {
 	int i = rand() % this->nrOfEvents;
 
@@ -18,7 +18,7 @@ void Event::generateEvent(Character &character)
 	{
 	case 0:
 		//Enemy encounter
-		enemyEncounter(character);
+		enemyEncounter(character, enemies);
 		break;
 	case 1:
 		//Puzzle
@@ -33,9 +33,123 @@ void Event::generateEvent(Character &character)
 }
 
 //Different events
-void Event::enemyEncounter(Character& character)
+void Event::enemyEncounter(Character& character, dArray<Enemy>& enemies)
 {
-	//while()
+	bool playerTurn = false;
+	int choice = 0;
+
+	//Coin toss for turn
+	int coinToss = rand() % 2 + 1;
+
+	if (coinToss == 1)
+	{
+		playerTurn = true;
+	}
+	else
+	{
+		playerTurn = false;
+	}
+
+	bool escape = false;
+	bool playerDefeated = false;
+	bool enemiesDefeated = false;
+
+	int nrOfEnemies = rand() % 5;
+
+	for (size_t i = 0; i < nrOfEnemies; i++)
+	{
+		enemies.push(Enemy(character.getLevel()));
+
+	}
+	
+	while (!escape && !playerDefeated && !enemiesDefeated)
+	{
+		if (playerTurn && !playerDefeated)
+		{
+			//Menu
+			system("CLS");
+
+			cout << "= BATTLE MENU =" << "\n\n";
+
+			cout << "0: Escape" << "\n";
+			cout << "1: Attack" << "\n";
+			cout << "2: Defend" << "\n";
+			cout << "3: Use Item" << "\n";
+
+			cout << "Choice: " << "\n\n";
+
+			cout << "\n";
+
+			cout << "Choice: ";
+
+			cin >> choice;
+
+			while (cin.fail() || choice >3 || choice < 0)
+			{
+				system("CLS");
+
+				cout << "Wrong input!" << "\n";
+				cin.clear();
+				cin.ignore(100, '\n');
+
+				cout << "= BATTLE MENU =" << "\n\n";
+
+				cout << "0: Escape" << "\n";
+				cout << "1: Attack" << "\n";
+				cout << "2: Defend" << "\n";
+				cout << "3: Use Item" << "\n";
+
+				cout << "Choice: " << "\n\n";
+				cin >> choice;
+			}
+
+			cin.ignore(100, '\n');
+			cout << "\n";
+
+			//Moves
+			switch (choice)
+			{
+			case 0:
+				escape = true;
+				break;
+			case 1:
+				break;
+			case 2:
+				break;
+			case 3:
+				break;
+
+			default:
+					break;
+			}
+
+			//End turn
+			playerTurn = false;
+
+		}
+		else if (!playerTurn && !escape && !enemiesDefeated)
+		{
+
+			//Enemy attack
+			for (size_t i = 0; i < enemies.size(); i++)
+			{
+
+			}
+
+			//End turn
+			playerTurn = true;
+		}
+		//Conditions
+
+		if (character.isAlive())
+		{
+			playerDefeated = true;
+		}
+		else if (!enemies.size() <= 0)
+		{
+			enemiesDefeated = true;
+		}
+	}
 }
 
 void Event::puzzleEncounter(Character& character)

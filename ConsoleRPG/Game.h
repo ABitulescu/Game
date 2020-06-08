@@ -2,7 +2,6 @@
 
 #include "Functions.h"
 #include "Event.h"
-#include "dArray.h"
 #include <ctime>
 #include <vector>
 #include <sstream>
@@ -11,6 +10,18 @@ using namespace std;
 
 class Game
 {
+private:
+	int choice;
+	bool playing;
+
+	//Character related
+	int activeCharacter;
+	vector<Character> characters;
+	string fileName;
+
+	//Enemies
+	dArray<Enemy> enemies;
+
 public:
 	Game();
 	virtual ~Game();
@@ -24,6 +35,7 @@ public:
 	void levelUpCharacter();
 	void saveCharacters();
 	void loadCharacters();
+	void selectCharacter();
 	void Travel();
 
 	//Accesors
@@ -31,14 +43,5 @@ public:
 
 	//Modifiers
 
-
-private:
-	int choice;
-	bool playing;
-
-	//Character related
-	int activeCharacter;
-	vector<Character> characters;
-	string fileName;
 };
 

@@ -1,4 +1,13 @@
 ﻿F:\ProgramFiles\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(467,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (GameRPG.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Character.cpp
+  Enemy.cpp
+F:\VisualStudioProjects\Game\Game\ConsoleRPG\Enemy.cpp(11,28): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  Event.cpp
+F:\VisualStudioProjects\Game\Game\ConsoleRPG\Event.cpp(146,32): warning C4804: '<=': unsafe use of type 'bool' in operation
   Game.cpp
-F:\VisualStudioProjects\Game\Game\ConsoleRPG\Game.cpp(118,41): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+F:\VisualStudioProjects\Game\Game\ConsoleRPG\Game.cpp(140,41): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  Main.cpp
+F:\VisualStudioProjects\Game\Game\ConsoleRPG\Main.cpp(5,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Generating Code...
+  LINK : F:\VisualStudioProjects\Game\Game\x64\Debug\Game.exe not found or not built by the last incremental link; performing full link
   ConsoleRPG.vcxproj -> F:\VisualStudioProjects\Game\Game\x64\Debug\Game.exe
