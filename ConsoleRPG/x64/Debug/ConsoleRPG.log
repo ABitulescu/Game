@@ -3,11 +3,15 @@
   Enemy.cpp
 F:\VisualStudioProjects\Game\Game\ConsoleRPG\Enemy.cpp(11,28): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
   Event.cpp
-F:\VisualStudioProjects\Game\Game\ConsoleRPG\Event.cpp(146,32): warning C4804: '<=': unsafe use of type 'bool' in operation
+F:\VisualStudioProjects\Game\Game\ConsoleRPG\Event.cpp(131,49): warning C4267: 'argument': conversion from 'size_t' to 'const unsigned int', possible loss of data
+F:\VisualStudioProjects\Game\Game\ConsoleRPG\Event.cpp(132,25): warning C4267: 'argument': conversion from 'size_t' to 'const unsigned int', possible loss of data
+F:\VisualStudioProjects\Game\Game\ConsoleRPG\Event.cpp(132,54): warning C4267: 'argument': conversion from 'size_t' to 'const unsigned int', possible loss of data
+F:\VisualStudioProjects\Game\Game\ConsoleRPG\Event.cpp(142,33): warning C4018: '>=': signed/unsigned mismatch
+F:\VisualStudioProjects\Game\Game\ConsoleRPG\Event.cpp(221,32): warning C4804: '<=': unsafe use of type 'bool' in operation
   Game.cpp
 F:\VisualStudioProjects\Game\Game\ConsoleRPG\Game.cpp(140,41): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
   Main.cpp
 F:\VisualStudioProjects\Game\Game\ConsoleRPG\Main.cpp(5,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   Generating Code...
-  LINK : F:\VisualStudioProjects\Game\Game\x64\Debug\Game.exe not found or not built by the last incremental link; performing full link
+F:\VisualStudioProjects\Game\Game\ConsoleRPG\Character.h(38): warning C4172: returning address of local variable or temporary
   ConsoleRPG.vcxproj -> F:\VisualStudioProjects\Game\Game\x64\Debug\Game.exe
